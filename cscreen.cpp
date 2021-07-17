@@ -30,7 +30,19 @@ using namespace std;
 
 CScreen::CScreen(const char  fname[])
 {
-    ???
+    ifstream myFile;
+
+    myFile.open(fname);
+    if(myFile.fail())
+    {
+        cout << "Error with file name...\n";
+    }
+
+    //get the display character and sleep interval
+    myFile.get(m_dispChar);
+    myFile >> m_sleep;
+    srand(time(NULL));
+    InitCurses();
 
 }  // end of "CScreen::CScreen"
 
@@ -77,7 +89,16 @@ void    CScreen::InitCurses()
 
 void    CScreen::Scatter()
 {
-    ???
+    initscr();
+    start_color();
+    init_pair(1, COLOR_RED, COLOR_BLUE);
+    init_pair(2, COLOR_BLACK, COLOR_MAGENTA);
+    init_pair(3, COLOR_WHITE, COLOR_BLUE);
+    init_pair(4, COLOR_BLACK, COLOR GREEN);
+    init_pair(5, COLOR_WHITE, COLOR_CYAN);
+    init_pair(6, COLOR_BLACK, COLOR_YELLOW);
+    init_pair(7, COLOR_WHITE, COLOR_BLACK);
+
 
 }  // end of "CScreen::Scatter"
 
