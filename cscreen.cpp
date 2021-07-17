@@ -64,7 +64,16 @@ CScreen::CScreen(const char  fname[])
 
 void    CScreen::InitCurses()
 {
-    ???
+    initscr();
+    start_color();
+    init_pair(1, COLOR_RED, COLOR_BLUE);
+    init_pair(2, COLOR_BLACK, COLOR_MAGENTA);
+    init_pair(3, COLOR_WHITE, COLOR_BLUE);
+    init_pair(4, COLOR_BLACK, COLOR GREEN);
+    init_pair(5, COLOR_WHITE, COLOR_CYAN);
+    init_pair(6, COLOR_BLACK, COLOR_YELLOW);
+    init_pair(7, COLOR_WHITE, COLOR_BLACK);
+
 
 }  // end of "CScreen::InitCurses"
 
@@ -89,15 +98,7 @@ void    CScreen::InitCurses()
 
 void    CScreen::Scatter()
 {
-    initscr();
-    start_color();
-    init_pair(1, COLOR_RED, COLOR_BLUE);
-    init_pair(2, COLOR_BLACK, COLOR_MAGENTA);
-    init_pair(3, COLOR_WHITE, COLOR_BLUE);
-    init_pair(4, COLOR_BLACK, COLOR GREEN);
-    init_pair(5, COLOR_WHITE, COLOR_CYAN);
-    init_pair(6, COLOR_BLACK, COLOR_YELLOW);
-    init_pair(7, COLOR_WHITE, COLOR_BLACK);
+    ????//write function here
 
 
 }  // end of "CScreen::Scatter"
