@@ -28,7 +28,9 @@ using namespace std;
 
 CMatrix::CMatrix(int numRows, int numCols)
 {
-    ???
+    m_numRows = numRows;
+
+    m_numCols = numCols;
 
 }  // end of "CMatrix::CMatrix"
 
